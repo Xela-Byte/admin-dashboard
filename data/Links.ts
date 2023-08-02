@@ -4,7 +4,7 @@ export const linkArray: Array<Links> = [
   {
     id: 1,
     linkName: "Agency Client",
-    linkSlug: "agency",
+    linkSlug: "agency-client",
   },
   {
     id: 2,
