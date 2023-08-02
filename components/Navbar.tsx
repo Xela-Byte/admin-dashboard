@@ -21,6 +21,7 @@ const Navbar = (props: Props) => {
       <div className="w-[95%] ml-[2.5%] mt-5 p-5 bg-white flex items-center justify-between">
         <button
           type="button"
+          aria-label="Menu-Open"
           onClick={() => {
             setToggleMenu(!toggleMenu);
           }}>
@@ -59,6 +60,7 @@ const Navbar = (props: Props) => {
             className="w-3/4 h-screen bg-white top-0 fixed pt-10 px-3">
             <div className="flex w-full">
               <button
+                aria-label="Menu-Close"
                 type="button"
                 className={"ml-auto mb-10"}
                 onClick={() => {
