@@ -54,7 +54,7 @@ const Sidebar = ({ toggleMenu, setToggleMenu }: Props) => {
                       key={id}
                       variants={item}
                       className={`w-full p-3 lg:px-7 rounded-md cursor-pointer hover:bg-green-700 ${
-                        pathname === `/admin/${linkSlug}` && "bg-green-800"
+                        pathname === `/admin${linkSlug}` && "bg-green-800"
                       }`}>
                       <p className="text-lg lg:text-xl text-white">
                         {linkName}

@@ -3,37 +3,42 @@ import { Links } from "@/types/Links";
 export const linkArray: Array<Links> = [
   {
     id: 1,
-    linkName: "Agency Client",
-    linkSlug: "agency-client",
+    linkName: "Home",
+    linkSlug: "",
   },
   {
     id: 2,
-    linkName: "User Client",
-    linkSlug: "user-client",
+    linkName: "Agency Client",
+    linkSlug: "/agency-client",
   },
   {
     id: 3,
-    linkName: "Billings",
-    linkSlug: "billings",
+    linkName: "User Client",
+    linkSlug: "/user-client",
   },
   {
     id: 4,
-    linkName: "Account",
-    linkSlug: "account",
+    linkName: "Billings",
+    linkSlug: "/billings",
   },
   {
     id: 5,
-    linkName: "Task",
-    linkSlug: "task",
+    linkName: "Account",
+    linkSlug: "/account",
   },
   {
     id: 6,
-    linkName: "Support",
-    linkSlug: "support",
+    linkName: "Task",
+    linkSlug: "/task",
   },
   {
     id: 7,
+    linkName: "Support",
+    linkSlug: "/support",
+  },
+  {
+    id: 8,
     linkName: "Settings",
-    linkSlug: "settings",
+    linkSlug: "/settings",
   },
 ];
