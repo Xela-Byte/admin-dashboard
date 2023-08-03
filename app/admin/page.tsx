@@ -2,9 +2,9 @@ type Props = {};
 
 const page = (props: Props) => {
   return (
-    <div className="w-full flex">
+    <div className="w-full flex lg:flex-col xl:flex-row">
       {/* Content */}
-      <div className="w-full px-3 py-5 lg:w-1/3 xl:w-[45%] lg:ml-[27%]">
+      <div className="w-full px-3 py-5 lg:w-full xl:w-1/2 flex flex-col xl:ml-auto">
         <div className="flex flex-col items-center justify-center py-5">
           <p className="text-xl font-bold">Tasks</p>
           <p className="text-lg font-semibold">November 2019</p>
@@ -40,7 +40,7 @@ const page = (props: Props) => {
         </div>
       </div>
 
-      <div className="hidden lg:flex flex-col self-auto w-full h-fit pb-10 lg:w-1/3 xl:w-[25%] rounded-md bg-white mt-10">
+      <div className="hidden lg:flex flex-col self-auto w-full h-fit pb-10 lg:w-1/2 lg:mx-auto mb-10 xl:w-[25%] rounded-md bg-white mt-10">
         <p className="text-center text-xl font-semibold mt-10 mb-5">
           Add Tasks
         </p>

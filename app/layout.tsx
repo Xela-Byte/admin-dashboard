@@ -1,7 +1,7 @@
-import Navbar from "@/components/Navbar";
-import "./globals.css";
+import Layout from "@/components/layout/Layout";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
+import "./globals.css";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunito.className} bg-gray-100`}>
-        {/* Navbar */}
-        <Navbar />
-        <main>{children}</main>
+        <Layout>
+          <main>{children}</main>
+        </Layout>
       </body>
     </html>
   );

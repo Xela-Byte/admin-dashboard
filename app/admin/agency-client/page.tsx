@@ -10,7 +10,7 @@ const page = (props: Props) => {
   const [agencyTab, setAgencyTab] = useState<string>("list");
 
   return (
-    <div className="w-full px-2">
+    <div className="w-screen lg:w-full px-2">
       <div className="w-full h-20 my-5 px-3 lg:px-10 lg:w-2/3 2xl:w-2/3 space-x-5 flex items-center justify-between">
         <button
           type="button"
