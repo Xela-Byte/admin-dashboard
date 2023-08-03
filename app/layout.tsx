@@ -17,9 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} overflow-hidden bg-gray-100`}>
+      <body className={`${nunito.className} lg:overflow-hidden bg-gray-100`}>
         <Layout>
-          <main>{children}</main>
+          <main className="w-full lg:h-[85vh] lg:overflow-scroll">
+            {children}
+          </main>
         </Layout>
       </body>
     </html>

@@ -12,9 +12,9 @@ const Layout = (props: PropsWithChildren) => {
         <Navbar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
       </div>
 
-      <div className="grid md:grid-cols-sidebar">
+      <div className="grid lg:grid-cols-sidebar">
         <Sidebar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
-        {props.children}
+        <div className="pt-5">{props.children}</div>
       </div>
     </div>
   );
