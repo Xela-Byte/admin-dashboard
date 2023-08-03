@@ -35,6 +35,7 @@ const Navbar = ({ toggleMenu, setToggleMenu }: Props) => {
       className={`bg-white text-black flex items-center justify-between w-screen fixed z-10 px-4 shadow-sm h-20`}>
       <button
         className="lg:hidden"
+        aria-label="Menu button"
         onClick={() => {
           setToggleMenu(!toggleMenu);
         }}>

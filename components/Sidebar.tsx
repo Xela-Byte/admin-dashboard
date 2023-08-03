@@ -24,7 +24,7 @@ const Sidebar = ({ toggleMenu, setToggleMenu }: Props) => {
         <button
           type="button"
           aria-label="Menu_button"
-          className="self-end w-10 h-10 rounded-full bg-green-500 flex items-center justify-center lg:hidden"
+          className="self-end w-10 h-10 rounded-full bg-green-700 flex items-center justify-center lg:hidden"
           onClick={() => {
             setToggleMenu(!toggleMenu);
           }}>
@@ -51,7 +51,9 @@ const Sidebar = ({ toggleMenu, setToggleMenu }: Props) => {
                       key={id}
                       variants={item}
                       className="w-full p-3 lg:px-7 rounded-md cursor-pointer">
-                      <p className="text-lg text-white">{linkName}</p>
+                      <p className="text-lg lg:text-xl text-white">
+                        {linkName}
+                      </p>
                     </motion.li>
                   );
                 })}
