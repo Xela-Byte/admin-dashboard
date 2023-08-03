@@ -3,9 +3,10 @@ import { AiOutlineClose } from "react-icons/ai";
 import { motion } from "framer-motion";
 import { container, item } from "@/animations/navbar";
 import { linkArray } from "@/data/Links";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Logo from "@/public/assets/reUSD.png";
 import Image from "next/image";
+import { useRouter as routing } from "next/router";
 
 type Props = {
   toggleMenu: boolean;
@@ -15,16 +16,18 @@ type Props = {
 const Sidebar = ({ toggleMenu, setToggleMenu }: Props) => {
   const router = useRouter();
 
+  const pathname = usePathname();
+
   return (
     <div
-      className={`flex flex-col justify-between bg-green-600 text-white lg:w-2/3 xl:w-full lg:sticky lg:-mt-16 top-0 z-20 fixed lg:h-screen h-full w-[300px] transition-transform .3s ease-in-out lg:translate-x-0 ${
+      className={`flex flex-col justify-between bg-green-600 text-white lg:w-2/3 xl:w-full lg:sticky lg:-mt-16 top-0 z-20 fixed lg:h-[95vh] h-full w-[300px] lg:rounded-s-lg transition-transform .3s ease-in-out lg:translate-x-0 ${
         !toggleMenu && "-translate-x-full"
       } `}>
       <nav className="flex flex-col p-3 lg:sticky top-0 lg:top-16">
         <button
           type="button"
           aria-label="Menu_button"
-          className="self-end w-10 h-10 rounded-full bg-green-700 flex items-center justify-center lg:hidden"
+          className="self-end w-10 h-10 rounded-full bg-green-500 flex items-center justify-center lg:hidden"
           onClick={() => {
             setToggleMenu(!toggleMenu);
           }}>
@@ -40,7 +43,7 @@ const Sidebar = ({ toggleMenu, setToggleMenu }: Props) => {
                 variants={container}
                 initial="hidden"
                 animate="show">
-                {linkArray.map((link) => {
+                {linkArray.map((link, index) => {
                   const { id, linkName, linkSlug } = link;
                   return (
                     <motion.li
@@ -50,7 +53,9 @@ const Sidebar = ({ toggleMenu, setToggleMenu }: Props) => {
                       }}
                       key={id}
                       variants={item}
-                      className="w-full p-3 lg:px-7 rounded-md cursor-pointer">
+                      className={`w-full p-3 lg:px-7 rounded-md cursor-pointer hover:bg-green-700 ${
+                        pathname === `/admin/${linkSlug}` && "bg-green-800"
+                      }`}>
                       <p className="text-lg lg:text-xl text-white">
                         {linkName}
                       </p>
