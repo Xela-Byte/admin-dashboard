@@ -37,6 +37,15 @@ const page = (props: Props) => {
           <div className="md:col-span-1 w-full flex items-center justify-center sm:w-52 my-5 h-40 bg-blue-100 py-15 px-10 border-l-8 border-blue-500 rounded-xl">
             Task 9
           </div>
+          <div className="md:col-span-1 w-full flex items-center justify-center sm:w-52 my-5 h-40 bg-red-100 py-15 px-10 border-l-8 border-red-500 rounded-xl">
+            Task 10
+          </div>
+          <div className="md:col-span-1 w-full flex items-center justify-center sm:w-52 my-5 h-40 bg-green-100 py-15 px-10 border-l-8 border-green-500 rounded-xl">
+            Task 11
+          </div>
+          <div className="md:col-span-1 w-full flex items-center justify-center sm:w-52 my-5 h-40 bg-blue-100 py-15 px-10 border-l-8 border-blue-500 rounded-xl">
+            Task 12
+          </div>
         </div>
       </div>
 
