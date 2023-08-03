@@ -49,6 +49,7 @@ const Navbar = ({ toggleMenu, setToggleMenu }: Props) => {
         <div className="flex space-x-5 items-center lg:mx-auto">
           <Image
             src={Person}
+            loading="eager"
             className="w-10 h-10 object-cover rounded-full"
             alt=""
           />

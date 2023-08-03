@@ -17,12 +17,13 @@ const Sidebar = ({ toggleMenu, setToggleMenu }: Props) => {
 
   return (
     <div
-      className={`flex flex-col justify-between bg-green-600 text-zinc-50 lg:w-2/3 xl:w-full lg:sticky lg:-mt-16 top-0 z-20 fixed lg:h-screen h-full w-[300px] transition-transform .3s ease-in-out lg:translate-x-0 ${
+      className={`flex flex-col justify-between bg-green-600 text-white lg:w-2/3 xl:w-full lg:sticky lg:-mt-16 top-0 z-20 fixed lg:h-screen h-full w-[300px] transition-transform .3s ease-in-out lg:translate-x-0 ${
         !toggleMenu && "-translate-x-full"
       } `}>
       <nav className="flex flex-col p-3 lg:sticky top-0 lg:top-16">
         <button
           type="button"
+          aria-label="Menu_button"
           className="self-end w-10 h-10 rounded-full bg-green-500 flex items-center justify-center lg:hidden"
           onClick={() => {
             setToggleMenu(!toggleMenu);
