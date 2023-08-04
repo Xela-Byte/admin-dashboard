@@ -1,4 +1,3 @@
-import Layout from "@/components/layout/Layout";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
@@ -6,8 +5,8 @@ import "./globals.css";
 const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Admin Dashboard",
-  description: "Admin Dasboard",
+  title: "DashBoard",
+  description: "Dashboard Home",
 };
 
 export default function RootLayout({
@@ -17,12 +16,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} lg:overflow-hidden bg-gray-100`}>
-        <Layout>
-          <main className="w-full lg:h-[85vh] lg:overflow-scroll">
-            {children}
-          </main>
-        </Layout>
+      <body className={`${nunito.className} bg-gray-100`}>
+        <main>{children}</main>
       </body>
     </html>
   );

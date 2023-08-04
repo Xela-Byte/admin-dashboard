@@ -38,6 +38,18 @@ const page = (props: Props) => {
             className={`w-full h-1 ${userTab === "data" && "bg-gray-500"}`}
           />
         </button>
+        <button
+          type="button"
+          aria-label="cloudUserTab"
+          onClick={() => {
+            setUserTab("cloud");
+          }}
+          className="w-1/2 space-y-3 lg:space-y-5 flex flex-col items-center justify-center">
+          <p className="text-lg lg:text-2xl font-medium">Cloud User Clients</p>
+          <div
+            className={`w-full h-1 ${userTab === "cloud" && "bg-gray-500"}`}
+          />
+        </button>
       </div>
 
       {userTab === "list" && (
@@ -269,6 +281,111 @@ const page = (props: Props) => {
                     defaultValue={"45454545"}
                     className="w-full p-3"
                   />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {userTab === "cloud" && (
+        <div className="w-full lg:px-10">
+          <ReactSearchBox
+            placeholder="Search ID"
+            value="Doe"
+            leftIcon={<BiSearchAlt size={25} />}
+            iconBoxSize={"50px"}
+            inputHeight={"50px"}
+            data={tableData}
+            callback={(record: object) => console.log(record)}
+          />
+          <div className="flex flex-col">
+            <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+              <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                <div className="overflow-hidden">
+                  <table className="min-w-full table-auto text-left text-sm font-light">
+                    <thead className="border-b font-medium dark:border-neutral-500">
+                      <tr>
+                        <th scope="col" className="px-6 py-4">
+                          ID
+                        </th>
+                        <th scope="col" className="px-6 py-4">
+                          NAME
+                        </th>
+                        <th scope="col" className="px-6 py-4">
+                          CF/DNI
+                        </th>
+                        <th scope="col" className="px-6 py-4">
+                          N Users
+                        </th>
+                        <th scope="col" className="px-6 py-4">
+                          Client Profile
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b dark:border-neutral-500">
+                        <td className="whitespace-nowrap px-6 py-4 font-medium">
+                          5
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">htp</td>
+                        <td className="whitespace-nowrap px-6 py-4">pdf</td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          @twitter
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          https://google.com
+                        </td>
+                      </tr>
+                      <tr className="border-b dark:border-neutral-500">
+                        <td className="whitespace-nowrap px-6 py-4 font-medium">
+                          1
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">Mark</td>
+                        <td className="whitespace-nowrap px-6 py-4">Otto</td>
+                        <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                        <td className="whitespace-nowrap px-6 py-4">@mdo</td>
+                      </tr>
+
+                      <tr className="border-b dark:border-neutral-500">
+                        <td className="whitespace-nowrap px-6 py-4 font-medium">
+                          3
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">Larry</td>
+                        <td className="whitespace-nowrap px-6 py-4">Wild</td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          @twitter
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          @twitter
+                        </td>
+                      </tr>
+                      <tr className="border-b dark:border-neutral-500">
+                        <td className="whitespace-nowrap px-6 py-4 font-medium">
+                          4
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">htp</td>
+                        <td className="whitespace-nowrap px-6 py-4">pdf</td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          @twitter
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          @twitter
+                        </td>
+                      </tr>
+                      <tr className="border-b dark:border-neutral-500">
+                        <td className="whitespace-nowrap px-6 py-4 font-medium">
+                          2
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">Jacob</td>
+                        <td className="whitespace-nowrap px-6 py-4">
+                          Thornton
+                        </td>
+                        <td className="whitespace-nowrap px-6 py-4">@fat</td>
+                        <td className="whitespace-nowrap px-6 py-4">@fat</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
